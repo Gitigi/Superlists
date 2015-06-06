@@ -58,14 +58,15 @@ WSGI_APPLICATION = 'superlists.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE':'django.db.backends.mysql', #'django.db.backends.sqlite3',
-        'NAME':'todo', #                 os.path.join(BASE_DIR,'db.sqlite3')
+        'ENGINE':'django.db.backends.mysql',#'django.db.backends.sqlite3',
+        'NAME':'todo', #os.path.join(BASE_DIR,'db.sqlite3')
         'USER':'root',
         'PASSWORD':'malkia65',
         'HOST':'localhost',
         'PORT':'3306',
     }
 }
+#django.db.backends.mysql
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
