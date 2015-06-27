@@ -59,7 +59,7 @@ WSGI_APPLICATION = 'superlists.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.mysql',
-        'NAME':'todo',  #os.path.join(BASE_DIR,'db.sqlite3'),
+        'NAME':'todo', #os.path.join(BASE_DIR,'db.sqlite3'),
         'USER':'root',
         'PASSWORD':'malkia65',
         'HOST':'localhost',
