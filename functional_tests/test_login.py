@@ -35,7 +35,7 @@ class LoginTest(FunctionalTest):
                 self.browser.switch_to_window(handle)
                 if text_in_title in self.browser.title:
                     return
-            reties -= 1
+            retries -= 1
             time.sleep(0.5)
         self.fail('could not find window')
 

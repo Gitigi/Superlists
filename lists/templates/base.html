@@ -41,40 +41,18 @@
 
 </div>
 <script src="/static/jquery.min.js" type="text/javascript"></script>
-<script src="/static/list.js" type="text/javascript"></script>
 <script src="/static/include.js" type="text/javascript"></script>
+<script src="/static/list.js" type="text/javascript"></script>
+<script src="/static/accounts.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-	
-	var loginLink = document.getElementById('login');
-	if(loginLink){
-		loginLink.onclick=function(){
-			navigator.id.request();
-			};
-		}
-	
-	var logoutLink = document.getElementById('logout');
-	if(logoutLink){
-		logoutLink.onclick=function(){navigator.id.logout();};
-		}
-		
-	var currentUser = '{{user.email}}' || null;
-	var csrf_token = '{{csrf_token}}';
-	console.log(currentUser);
-	
-	navigator.id.watch({
-		loggedInUser : currentUser,
-		onlogin : function(assertion){
-			$.post('/accounts/login',{assertion:assertion,csrfmiddlewaretoken:csrf_token})
-			.done(function(){window.location.reload();})
-			.fail(function(){navigator.id.logout();});
-			},
-		onlogout:function(){
-			$.post('/accounts/logout')
-			.always(function(){window.location.reload();});
-			}
-		});
-		
+	$(document).ready(function() {
+		var user = "{{user.email}}" || null;
+		var token = "{{ csrf_token }}";
+		var urls = {
+			login : "TODO",
+			logout : "TODO"
+		};
+		Superlists.Accounts.initialize(navigator,user,token,urls);
 	});
 </script>
 </body>
