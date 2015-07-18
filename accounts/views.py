@@ -6,4 +6,4 @@ def persona_login(request):
     user = authenticate(assertion=request.POST['assertion'])
     if user:
         login(request,user)
-    return redirect('/')
+    return HttpResponse('OK')
