@@ -48,13 +48,13 @@ class MyListsTest(FunctionalTest):
 
         #She sees that her list is in there, named according to its
         #first list item
-        self.browser.find_element_by_link_text('Reticulate splines').click()
+        self.browser.find_element_by_link_text('Recticulate splines').click()
         self.assertEqual(self.browser.current_url,first_list_url)
 
         #she decides to start another list, just to see
         self.browser.get(self.server_url)
         self.get_item_input_box().send_keys('Click cows\n')
-        secon_list_url = self.browser.current_url
+        second_list_url = self.browser.current_url
 
         #under "my lists", her new list appears
         self.browser.find_element_by_link_text('My lists').click()
