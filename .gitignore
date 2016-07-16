@@ -1,7 +1,3 @@
-__pycache__
-*.pyc
 db.sqlite3
-superlists.nja
-superlists.sublime-project
-superlists.sublime-workspace
+__pycache__
 venv
